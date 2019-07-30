@@ -194,6 +194,13 @@ namespace COMP123_S2019_Lesson11B
                     MessageBox.Show("ERROR: " + exception.Message, "ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                catch (FormatException exception)
+                {
+                    Debug.WriteLine("ERROR: " + exception.Message);
+
+                    MessageBox.Show("ERROR: " + exception.Message + "\nPlease select the appropriate file type", "File I/O Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -210,7 +217,7 @@ namespace COMP123_S2019_Lesson11B
             {
                 // open a stream to write
                 using (BinaryWriter outputStream = new BinaryWriter(
-                   File.Open("Student.txt", FileMode.Create)))
+                   File.Open(StudentSaveFileDialog.FileName, FileMode.Create)))
                 {
                     // write stuffs to file
 
@@ -220,12 +227,15 @@ namespace COMP123_S2019_Lesson11B
                     outputStream.Write(Program.student.LastName);
 
                     //cleanUp
+                    outputStream.Flush();
                     outputStream.Close();
                     outputStream.Dispose();
-                }
-
-                MessageBox.Show("File Saved Successfully", "Saving...",
+               
+                // give feedback to user that file has been saved
+                // this is a modal form
+                MessageBox.Show("Binary File Saved Successfully", "Saving Binary File...",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             }
 
@@ -255,12 +265,14 @@ namespace COMP123_S2019_Lesson11B
                         // cleanup
                         inputStream.Close();
                         inputStream.Dispose();
-
-                        NextButton_Click(sender, e);
                     }
+
+                    NextButton_Click(sender, e);
                 }
                 catch (IOException exception)
                 {
+                    Debug.WriteLine("ERROR: " + exception.Message);
+
                     MessageBox.Show("Error: " + exception.Message, "File I/O Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

@@ -36,8 +36,6 @@
             this.openToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.openBinaryFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveBinaryFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,18 +47,18 @@
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.StudentDataGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sectionBDatabaseDataSet = new COMP123_S2019_Lesson11B.SectionBDatabaseDataSet();
             this.ShowDataButton = new System.Windows.Forms.Button();
             this.SelectionLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.StudentSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.StudentOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.studentTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sectionBDatabaseDataSet = new COMP123_S2019_Lesson11B.SectionBDatabaseDataSet();
             this.studentTableTableAdapter = new COMP123_S2019_Lesson11B.SectionBDatabaseDataSetTableAdapters.StudentTableTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainMenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGridView)).BeginInit();
@@ -85,8 +83,6 @@
             this.openToolStripMenuItem1,
             this.toolStripSeparator3,
             this.saveToolStripMenuItem1,
-            this.toolStripSeparator4,
-            this.toolStripSeparator5,
             this.openBinaryFileToolStripMenuItem,
             this.saveBinaryFileToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -118,16 +114,6 @@
             this.saveToolStripMenuItem1.Size = new System.Drawing.Size(206, 22);
             this.saveToolStripMenuItem1.Text = "Save(Text File)";
             this.saveToolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(203, 6);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(203, 6);
             // 
             // openBinaryFileToolStripMenuItem
             // 
@@ -244,54 +230,6 @@
             this.StudentDataGridView.TabIndex = 2;
             this.StudentDataGridView.SelectionChanged += new System.EventHandler(this.StudentDataGridView_SelectionChanged);
             // 
-            // ShowDataButton
-            // 
-            this.ShowDataButton.Location = new System.Drawing.Point(439, 371);
-            this.ShowDataButton.Name = "ShowDataButton";
-            this.ShowDataButton.Size = new System.Drawing.Size(188, 46);
-            this.ShowDataButton.TabIndex = 3;
-            this.ShowDataButton.Text = "Show Data";
-            this.ShowDataButton.UseVisualStyleBackColor = true;
-            this.ShowDataButton.Click += new System.EventHandler(this.ShowDataButton_Click);
-            // 
-            // SelectionLabel
-            // 
-            this.SelectionLabel.BackColor = System.Drawing.Color.White;
-            this.SelectionLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SelectionLabel.Location = new System.Drawing.Point(12, 287);
-            this.SelectionLabel.Name = "SelectionLabel";
-            this.SelectionLabel.Size = new System.Drawing.Size(746, 36);
-            this.SelectionLabel.TabIndex = 4;
-            this.SelectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // NextButton
-            // 
-            this.NextButton.Location = new System.Drawing.Point(671, 371);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(87, 43);
-            this.NextButton.TabIndex = 5;
-            this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // StudentOpenFileDialog
-            // 
-            this.StudentOpenFileDialog.FileName = "openFileDialog1";
-            // 
-            // studentTableBindingSource
-            // 
-            this.studentTableBindingSource.DataMember = "StudentTable";
-            this.studentTableBindingSource.DataSource = this.sectionBDatabaseDataSet;
-            // 
-            // sectionBDatabaseDataSet
-            // 
-            this.sectionBDatabaseDataSet.DataSetName = "SectionBDatabaseDataSet";
-            this.sectionBDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentTableTableAdapter
-            // 
-            this.studentTableTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -327,6 +265,54 @@
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
             this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.lastNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // studentTableBindingSource
+            // 
+            this.studentTableBindingSource.DataMember = "StudentTable";
+            this.studentTableBindingSource.DataSource = this.sectionBDatabaseDataSet;
+            // 
+            // sectionBDatabaseDataSet
+            // 
+            this.sectionBDatabaseDataSet.DataSetName = "SectionBDatabaseDataSet";
+            this.sectionBDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ShowDataButton
+            // 
+            this.ShowDataButton.Location = new System.Drawing.Point(439, 371);
+            this.ShowDataButton.Name = "ShowDataButton";
+            this.ShowDataButton.Size = new System.Drawing.Size(188, 46);
+            this.ShowDataButton.TabIndex = 3;
+            this.ShowDataButton.Text = "Show Data";
+            this.ShowDataButton.UseVisualStyleBackColor = true;
+            this.ShowDataButton.Click += new System.EventHandler(this.ShowDataButton_Click);
+            // 
+            // SelectionLabel
+            // 
+            this.SelectionLabel.BackColor = System.Drawing.Color.White;
+            this.SelectionLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SelectionLabel.Location = new System.Drawing.Point(12, 287);
+            this.SelectionLabel.Name = "SelectionLabel";
+            this.SelectionLabel.Size = new System.Drawing.Size(746, 36);
+            this.SelectionLabel.TabIndex = 4;
+            this.SelectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NextButton
+            // 
+            this.NextButton.Location = new System.Drawing.Point(671, 371);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(87, 43);
+            this.NextButton.TabIndex = 5;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // StudentOpenFileDialog
+            // 
+            this.StudentOpenFileDialog.FileName = "openFileDialog1";
+            // 
+            // studentTableTableAdapter
+            // 
+            this.studentTableTableAdapter.ClearBeforeFill = true;
             // 
             // MainForm
             // 
@@ -372,9 +358,7 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
