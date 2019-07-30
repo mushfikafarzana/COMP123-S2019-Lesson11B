@@ -184,13 +184,14 @@ namespace COMP123_S2019_Lesson11B
                         // cleanup
                         inputStream.Close();
                         inputStream.Dispose();
-
-                        NextButton_Click(sender, e);
                     }
+
+                    NextButton_Click(sender, e);
                 }
                 catch (IOException exception)
                 {
-                    MessageBox.Show("Error: " + exception.Message, "File I/O Error",
+                    Debug.WriteLine("ERROR: " + exception.Message);
+                    MessageBox.Show("ERROR: " + exception.Message, "ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
