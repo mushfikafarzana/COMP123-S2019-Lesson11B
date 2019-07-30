@@ -56,7 +56,7 @@
             this.IDDataLabel.Name = "IDDataLabel";
             this.IDDataLabel.Size = new System.Drawing.Size(149, 34);
             this.IDDataLabel.TabIndex = 0;
-            this.IDDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IDDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StudentIDLabel
             // 
@@ -75,7 +75,7 @@
             this.StudentIDDataLabel.Name = "StudentIDDataLabel";
             this.StudentIDDataLabel.Size = new System.Drawing.Size(149, 34);
             this.StudentIDDataLabel.TabIndex = 0;
-            this.StudentIDDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.StudentIDDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FirstNameLabel
             // 
@@ -94,7 +94,7 @@
             this.FirstNameDataLabel.Name = "FirstNameDataLabel";
             this.FirstNameDataLabel.Size = new System.Drawing.Size(388, 34);
             this.FirstNameDataLabel.TabIndex = 0;
-            this.FirstNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.FirstNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LastNameLabel
             // 
@@ -113,7 +113,7 @@
             this.LastNameDataLabel.Name = "LastNameDataLabel";
             this.LastNameDataLabel.Size = new System.Drawing.Size(388, 34);
             this.LastNameDataLabel.TabIndex = 0;
-            this.LastNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LastNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BackButton
             // 
